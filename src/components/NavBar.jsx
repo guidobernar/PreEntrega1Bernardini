@@ -1,10 +1,12 @@
 import React from 'react';
+import CartWidget from './CartWidget';
+
 
 function NavBar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <a className="navbar-brand" href="#">Tienda de Herramientas</a>
-      <ul className="navbar-nav ml-auto">
+      <ul className="navbar-nav ml-auto navbar-list">
         <li className="nav-item">
           <a className="nav-link" href="#">Inicio</a>
         </li>
