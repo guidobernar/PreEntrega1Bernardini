@@ -1,19 +1,27 @@
 import React from 'react';
-import './App.css';
-import NavBar from './components/NavBar';
-import ItemListContainer from './components/ItemListContainer';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import ProductCatalog from './components/ProductCatalog';
+import ProductDetail from './components/ProductDetail';
+
+// Resto del código de tu componente App
+
 
 function App() {
   return (
-    <div className="App">
-      <NavBar />
-      <ItemListContainer greeting="¡Bienvenido a nuestra tienda de herramientas!" />
-      {/* Agrega aquí el resto de tu contenido */}
-    </div>
+    <Router>
+      <div>
+        <Switch>
+          <Route path="/" exact component={ProductCatalog} />
+          <Route path="/product/:id" component={ProductDetail} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
-
-
 export default App;
+
+
+
+
 
